@@ -9,6 +9,7 @@ var scripts = [
     vendors + 'jquery/dist/jquery.min.js',
     vendors + 'bootstrap/dist/js/bootstrap.min.js',
     vendors + 'angular/angular.min.js',
+    vendors + 'angular-ui-router/release/angular-ui-router.min.js',
     './resources/assets/scripts/core.js',
     './config/app.js',
 ];
