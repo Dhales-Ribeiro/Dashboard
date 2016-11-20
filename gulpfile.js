@@ -10,9 +10,10 @@ var scripts = [
     vendors + 'bootstrap/dist/js/bootstrap.min.js',
     vendors + 'angular/angular.min.js',
     vendors + 'angular-ui-router/release/angular-ui-router.min.js',
-    './resources/assets/scripts/core.js',
-    './config/app.js',
-    './routes/route.config.js',
+    './resources/assets/scripts/**',
+    './config/**',
+    './routes/**',
+    './app/services/**',
 ];
 
 var styles = [
