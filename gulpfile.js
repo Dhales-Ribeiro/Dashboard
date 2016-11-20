@@ -12,6 +12,7 @@ var scripts = [
     vendors + 'angular-ui-router/release/angular-ui-router.min.js',
     './resources/assets/scripts/core.js',
     './config/app.js',
+    './routes/route.config.js',
 ];
 
 var styles = [
