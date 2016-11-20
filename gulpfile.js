@@ -13,7 +13,7 @@ var scripts = [
     './resources/assets/scripts/**',
     './config/**',
     './routes/**',
-    './app/services/**',
+    './app/**/**',
 ];
 
 var styles = [
