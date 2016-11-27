@@ -1,27 +1,29 @@
 /**
  * Created by dhales on 20/11/16.
  */
-application.factory('AuthenticateService', function (dbService) {
+application.factory('AuthenticateService', function (dbService, $q, localStorageService) {
 
     var _authenticate = function(data) {
 
         if(!angular.isObject(data)){
-            console.log('não é um objeto valido');
+            throw new TypeError('Um objeto e Esperado');
+            return false
         }
+        var deferred = $q.defer();
+        var result = dbService.run("SELECT * FROM users WHERE email = '"+ data.email +"' AND password = '"+ data.password +"';",function(res){
+            if(res.error)
+                throw res.error;
+            deferred.resolve(res);
+        });
+        return deferred.promise;
+    }
 
-        var email = data.email;
-        var password = data.password;
-
-        var result = dbService.run("SELECT * FROM users WHERE email = '"+ data.email +"' AND password = '"+ data.password +"';");
-
-        if(result.length == 1){
-            console.log('logado');
-        }else{
-            console.log('ocorreu um erro');
-        }
+    var _logout = function () {
+        localStorageService.clearAll();
     }
 
     return{
-        authenticate: _authenticate
+        authenticate: _authenticate,
+        logout: _logout
     }
 })
