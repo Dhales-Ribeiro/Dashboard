@@ -1,14 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
+<md-toolbar class="md-warn">
+    <div class="md-toolbar-tools ">
+        <h3>
+            <span>Dashboard</span>
+        </h3>
+    </div>
+</md-toolbar>
 
-<input type="email" ng-model="user.email">
-<input type="password" ng-model="user.password">
-<button ng-click="login(user)">logar</button>
+<form name="userForm" class="form-signin ">
+    <md-input-container class="md-block email animated bounceIn">
+        <label>Email</label>
+        <input name="email" ng-model="user.email" ng-init="user.email='administrador@delosservicos.com.br'" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
 
-</body>
-</html>
+        <div ng-messages="userForm.email.$error" role="alert">
+            <div ng-show="userForm.email.$error.pattern">Você deve usar um email valido!</div>
+            <div ng-show="userForm.email.$error.minlength">O camopo de ter no minimo 6 caracteres!</div>
+        </div>
+    </md-input-container>
+
+    <md-input-container class="md-block pass animated bounceIn">
+        <label>Password</label>
+        <input name="password" type="password" ng-model="user.password" required minlength="6"/>
+        <div ng-messages="userForm.password.$error" role="alert">
+            <div ng-show="userForm.password.$error.minlength">O camopo de ter no minimo 6 caracteres!</div>
+        </div>
+    </md-input-container>
+    <div class="text-center">
+        <md-button type="submit" class="md-raised md-warn" ng-click="login(user)">Entrar</md-button>
+    </div>
+</form>
+
+<nav class="navbar navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-container">
+            <div class="pull-left">
+                <md-button class="md-raised md-warn">
+                    <md-icon class="material-icons">help_outline</md-icon>
+                </md-button>
+                <md-button class="md-raised md-warn">
+                    PT
+                </md-button>
+            </div>
+
+            <div class=" pull-right">
+                <md-button class="md-raised md-warn">
+                    <md-icon class="material-icons">settings</md-icon>
+                </md-button>
+
+                <md-button class="md-raised md-warn" onclick="window.close()">
+                    <md-icon class="material-icons">power_settings_new</md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="particles-js"></div>
