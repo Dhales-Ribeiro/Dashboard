@@ -28,6 +28,8 @@ var scripts = [
 var styles = [
     vendors + 'bootstrap/dist/css/bootstrap.min.css',
     vendors + 'bootstrap/dist/css/bootstrap-theme.min.css',
+    vendors + 'angular-material/angular-material.min.css',
+    './resources/assets/styles/**',
 ];
 
 var fonts = [
