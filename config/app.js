@@ -3,4 +3,4 @@
  */
 
 
-var application = angular.module("dashboard", [ "ui.router"]);
+var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule']);
