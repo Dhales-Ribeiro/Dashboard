@@ -1,8 +1,22 @@
 /**
  * Created by dhales on 20/11/16.
  */
-application.controller('LoginController', function ($scope, $location, AuthenticateService) {
+application.controller('LoginController', function ($scope, $location, $state, AuthenticateService, localStorageService) {
+    particlesJS.load('particles-js', './public/js/particles.json', function() {
+    });
     $scope.login = function (user) {
-        AuthenticateService.authenticate(user);
+        AuthenticateService.authenticate(user).then(function (res) {
+            if(res.length == 1){
+                $state.go('app.statistics');
+                var data = res[0];
+                data._embedded;
+                localStorageService.set('userLogged', data);
+            }else{
+                console.log("erro")
+            }
+
+        }, function (error) {
+            console.log(error)
+        })
     }
 });
