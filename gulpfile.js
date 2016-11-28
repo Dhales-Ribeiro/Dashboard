@@ -15,6 +15,7 @@ var scripts = [
     vendors + 'angular-messages/angular-messages.min.js',
     vendors + 'angular-material/angular-material.min.js',
     vendors + 'angular-local-storage/dist/angular-local-storage.min.js',
+    vendors + 'angular-material-data-table/dist/md-data-table.min.js',
     vendors + 'particles.js/particles.js',
     './resources/assets/scripts/**',
     './config/**',
@@ -29,6 +30,7 @@ var styles = [
     vendors + 'bootstrap/dist/css/bootstrap.min.css',
     vendors + 'bootstrap/dist/css/bootstrap-theme.min.css',
     vendors + 'angular-material/angular-material.min.css',
+    vendors + 'angular-material-data-table/dist/md-data-table.min.css',
     './resources/assets/styles/**',
 ];
 
