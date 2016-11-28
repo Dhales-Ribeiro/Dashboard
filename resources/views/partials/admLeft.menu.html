@@ -1,0 +1,104 @@
+<div class="box-cell scrollable hover">
+    <div class="box-inner">
+        <div class="p hidden-folded" style="background-image:url(./public/images/design-bg-1.png); height: 150px; position: relative; background-size:cover">
+            <div style="position:absolute; bottom: 0px;left: 0px; padding: 15px">
+                <span class="block m-t-sm" style="color: #FFF;">
+                <span class="block bold">{{user.name}}</span>
+            <span class="pull-right auto">
+              <i class="fa inline fa-caret-down"></i>
+              <i class="fa none fa-caret-up"></i>
+            </span>
+                {{user.email}}
+            </span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul class="sidebar nav">
+            <li class="nav-header m-v-sm hidden-folded" style="padding:10px 16px">
+                Menu do Sistema
+            </li>
+            <li ng-class="{active : activeMenu === 'start'}" ng-click="setActive('start')">
+                <a md-ink-ripple ui-sref="app.search " >
+                    <!--<b class="badge bg-danger up pull-right">2</b>-->
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.3s;">settings_input_svideo</md-icon>
+                    <span class="p-l"> Dashboard</span>
+                </a>
+            </li>
+
+            <li ng-class="{active : activeMenu === 'estatistics'}" ng-click="setActive('estatistics')">
+                <a md-ink-ripple ui-sref="adm.statistics">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">graphic_eq</md-icon>
+                    <span class="p-l"> Estatisticas</span>
+                </a>
+            </li>
+
+            <li ng-class="{active : activeMenu === 'userRegister'}" ng-click="setActive('userRegister')">
+                <a md-ink-ripple ui-sref="adm.users">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">group</md-icon>
+                    <span class="p-l"> Usuários</span>
+                </a>
+            </li>
+
+            <li ng-class="{active : activeMenu === 'roles'}" ng-click="setActive('roles')">
+                <a md-ink-ripple ui-sref="adm.statistics">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">vpn_key</md-icon>
+                    <span class="p-l"> Perfis</span>
+                </a>
+            </li>
+
+
+
+            <!---
+            <li ng-class="{active : activeMenu === 'add'}" ng-click="setActive('add')">
+                <a md-ink-ripple ui-sref="app.register">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.4s;">add_circle_outline</md-icon>
+                    <span class="p-l">Cadastrar</span>
+                </a>
+            </li>
+
+            <li ng-class="{active : activeMenu === 'estatistics'}" ng-click="setActive('estatistics')">
+                <a md-ink-ripple ui-sref="app.statistics">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">graphic_eq</md-icon>
+                    <span class="p-l">Estatisticas</span>
+                </a>
+            </li>
+            <li ng-class="{active : activeMenu === 'galeri'}" ng-click="setActive('galeri')">
+                <a md-ink-ripple ui-sref="app.statistics">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.6s;">photo_album</md-icon>
+                    <span class="p-l">Galeria de Imagens</span>
+                </a>
+            </li>
+            <li ng-class="{active : activeMenu === 'sincronize'}" ng-click="setActive('sincronize')">
+                <a md-ink-ripple ui-sref="app.synchronize">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.7s;">publish</md-icon>
+                    <span class="p-l">Sincronizar</span>
+                </a>
+            </li>
+            <li ng-class="{active : activeMenu === 'importexport'}" ng-click="setActive('importexport')">
+                <a md-ink-ripple ui-sref="app.synchronize">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.8s;">import_export</md-icon>
+                    <span class="p-l">Importar / Exportar</span>
+                </a>
+            </li>
+            <li ng-class="{active : activeMenu === 'changepass'}" ng-click="setActive('changepass')">
+                <a  md-ink-ripple ui-sref="app.changepass">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.9s;">vpn_key</md-icon>
+                    <span class="p-l">Trocar Senha</span>
+                </a>
+            </li>
+            <li ng-class="{active : activeMenu === 'del'}" ng-click="setActive('del')">
+                <a md-ink-ripple>
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 2s;">delete</md-icon>
+                    <span class="p-l">Lixeira</span>
+                </a>
+            </li>
+
+            --->
+
+        </ul>
+
+    </div>
+</div>
