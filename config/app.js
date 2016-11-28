@@ -6,22 +6,22 @@
 var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('green', {
-                'default': '900',
-                'hue-1': '50',
-                'hue-2': '100',
-                'hue-3': '200'
+            .primaryPalette('indigo', {
+                'default': '500',
+                'hue-1': '100',
+                'hue-2': '500',
+                'hue-3': '900'
             })
-            .accentPalette('grey', {
-                'default': '900',
-                'hue-1': '50',
-                'hue-2': '100',
-                'hue-3': '200'
+            .accentPalette('orange', {
+                'default': '500',
+                'hue-1': '100',
+                'hue-2': '500',
+                'hue-3': '900'
             })
             .warnPalette('red', {
-                'default': '900',
-                'hue-1': '50',
-                'hue-2': '100',
-                'hue-3': '200'
+                'default': '500',
+                'hue-1': '100',
+                'hue-2': '500',
+                'hue-3': '900'
             })
     });
