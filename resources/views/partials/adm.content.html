@@ -1,0 +1,16 @@
+<md-toolbar class="md-warn animated bounceInDown" style="z-index:61; position: fixed;">
+    <div class="md-toolbar-tools">
+        <h2>
+            <span class="animated zoomIn" style="-webkit-animation-delay: 1.3s;">Dashboard</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button animated fadeIn" ng-click="exitApp($event)" style="-webkit-animation-delay: 1.8s;">
+            <i class="material-icons i-24">power_settings_new</i>
+        </md-button>
+    </div>
+</md-toolbar>
+<div class="app-content"  style="position: fixed; margin-left: 64px;">
+    <md-content flex layout-padding class="paddingContainer" ui-view id="view">
+
+    </md-content>
+</div>
