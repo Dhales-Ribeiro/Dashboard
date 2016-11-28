@@ -3,7 +3,7 @@
  */
 
 
-var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule'])
+var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule', 'md.data.table'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
             .primaryPalette('indigo', {
