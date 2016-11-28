@@ -2,7 +2,7 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local('Material Icons'),
     local('MaterialIcons-Regular'),
     url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
@@ -45,6 +45,9 @@ body {
     color: rgba(0, 0, 0, 0.87);
     background: #1A237E;
 }
+.paddingContainer{
+    padding: 32px 32px;
+}
 
 .bold{
     font-weight: bold;
@@ -71,6 +74,28 @@ body {
 }
 .text-center{
     text-align: center;
+}
+
+/* add Button Group */
+
+md-button-group {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0;
+    margin: 6px 8px;
+    min-height: 36px;
+    min-width: 88px;
+}
+
+md-button-group.md-raised:not([disabled]) {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+md-button-group > .md-button {
+    border-radius: 0;
+    border: 0;
+    min-width: 20px;
+    margin: 0;
 }
 .form-signin {
     position: fixed;
@@ -385,7 +410,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background: rgb(183,28,28);
     border: 1px none rgb(183,28,28);
-    //border-radius: 50px;
+//border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(183,28,28);
@@ -396,7 +421,7 @@ body {
 ::-webkit-scrollbar-track {
     background: #ffffff;
     border: 1px none rgb(183,28,28);
-    //border-radius: 50px;
+//border-radius: 50px;
 }
 ::-webkit-scrollbar-track:hover {
     background: #ffffff;
@@ -406,4 +431,150 @@ body {
 }
 ::-webkit-scrollbar-corner {
     background: transparent;
+}
+
+.teste1{
+    position: fixed;
+    left: 0;
+    background: rgb(183,28,28);
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+.teste2{
+    position: fixed;
+    right: 0;
+    background: rgb(255,255,255);
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.adm-icon-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -75px;
+}
+
+.form-admin {
+    position: absolute;
+    max-width: 400px;
+    min-width: 400px;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -200px;
+    background: rgba(255, 255, 255, 0.8);
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+.layout-padding>*{
+    padding: 0;
+}
+
+.panel {
+    border-radius: 3px;
+}
+.panel-heading {
+    padding: 16px 24px;
+    border-radius: 3px 3px 0 0;
+}
+
+.panel-dca .panel-heading {
+    background-color: #f2f3f3;
+}
+
+.panel-dca .panel-heading.bg-white {
+    background-color: #fff;
+}
+
+.panel-heading.no-border {
+    margin: -1px -1px 0 -1px;
+    border: none;
+}
+.panel-body {
+    padding: 16px 24px;
+}
+
+.panel-footer {
+    padding: 16px 24px;
+    background-color: #f2f3f3;
+    border-color: #eaebec;
+    border-radius: 0 0 3px 3px;
+}
+.panel-dca {
+    border-color: #dddee0;
+}
+
+.panel-dca > .panel-heading,
+.panel-dca > .panel-footer {
+    border-color: #eaebec;
+}
+
+.panel-primary {
+    border-color: #d0d4ed;
+}
+
+.panel-primary > .panel-heading {
+    color: #252f69;
+    background-color: #e2e5f4;
+    border-color: #d0d4ed;
+}
+
+.panel-info {
+    border-color: #c6e4fc;
+}
+
+.panel-info > .panel-heading {
+    color: #0960a5;
+    background-color: #deeffd;
+    border-color: #c6e4fc;
+}
+
+.panel-success {
+    border-color: #d3ebd4;
+}
+
+.panel-success > .panel-heading {
+    color: #2d682f;
+    background-color: #e4f3e5;
+    border-color: #d3ebd4;
+}
+
+.panel-warning {
+    border-color: #ffefc0;
+}
+
+.panel-warning > .panel-heading {
+    color: #a07800;
+    background-color: #fff6da;
+    border-color: #ffefc0;
+}
+
+.panel-danger {
+    border-color: #fcccc9;
+}
+
+.panel-danger > .panel-heading {
+    color: #ba160a;
+    background-color: #fde3e1;
+    border-color: #fcccc9;
+}
+
+.panel-dark {
+    border-color: #d5d7dd;
+}
+
+.panel-dark > .panel-heading {
+    color: #1e222c;
+    background-color: #e3e5e9;
+    border-color: #d5d7dd;
+}
+
+md-toolbar.md-table-toolbar.alternate {
+    color: #1e88e5;
+    background-color: #e3f2fd;
 }
