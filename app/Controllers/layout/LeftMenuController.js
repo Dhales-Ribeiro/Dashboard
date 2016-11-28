@@ -13,21 +13,28 @@ application.controller('LeftMenuController', function ($scope, $mdSidenav, local
         $scope.activeMenu = iten;
     }
 
-    var user = localStorageService.get('userLogged');
+    var localStorageKey = localStorageService.keys()
 
-    if(angular.isObject(user)){
-        $scope.user = user;
-    }else{
-        $scope.user = {
-            name: 'Indefinido',
-            email: 'Indefinido'
-        };
-
+    if(localStorageKey == 'userLogged'){
+        var user = localStorageService.get('userLogged');
+        if(angular.isObject(user)){
+            $scope.user = user;
+        }else{
+            $scope.user = {
+                name: 'Indefinido',
+                email: 'Indefinido'
+            };
+        }
     }
-
-
-
-
-
-
+    if(localStorageKey == 'admLogged'){
+        var user = localStorageService.get('admLogged');
+        if(angular.isObject(user)){
+            $scope.user = user;
+        }else{
+            $scope.user = {
+                name: 'Indefinido',
+                email: 'Indefinido'
+            };
+        }
+    }
 })
