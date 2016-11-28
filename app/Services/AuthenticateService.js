@@ -22,8 +22,13 @@ application.factory('AuthenticateService', function (dbService, $q, localStorage
         localStorageService.clearAll();
     }
 
+    var _clear = function () {
+        localStorageService.clearAll();
+    }
+
     return{
         authenticate: _authenticate,
-        logout: _logout
+        logout: _logout,
+        clear : _clear
     }
 })
