@@ -1,15 +1,15 @@
 
 <div class="container" style="padding: 0; margin-left: 0">
-    <div class="teste1 text-center" style="color: #fff">
-        <h3>Painel de Controle DCA</h3>
+    <div class="left-content text-center" style="color: #fff">
+        <h3>Painel de Controle</h3>
         <h4>Use um login de Administrador para acessar o painel</h4>
         <div class="adm-icon-icon">
             <md-icon class="material-icons" style="font-size: 150px">fingerprint</md-icon>
         </div>
     </div>
-    <div class="teste2">
+    <div class="rigtht-content">
         <div class="pull-right">
-            <md-button class="md-raised md-warn" ui-sref="login">Aplicação</md-button>
+            <md-button class="md-raised" ui-sref="login">Aplicação</md-button>
         </div>
 
         <form name="userForm" class="form-admin">
@@ -31,7 +31,7 @@
                 </div>
             </md-input-container>
             <div class="text-center">
-                <md-button type="submit" class="md-raised md-warn" ng-click="adminLogin(user)">Entrar</md-button>
+                <md-button type="submit" class="md-raised" ng-click="adminLogin(user)">Entrar</md-button>
             </div>
         </form>
 
