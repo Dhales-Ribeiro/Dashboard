@@ -21,16 +21,16 @@
                 Menu do Sistema
             </li>
             <li ng-class="{active : activeMenu === 'start'}" ng-click="setActive('start')">
-                <a md-ink-ripple ui-sref="app.search " >
+                <a md-ink-ripple ui-sref="adm.dashboard " >
                     <!--<b class="badge bg-danger up pull-right">2</b>-->
-                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.3s;">settings_input_svideo</md-icon>
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.3s;">dashboard</md-icon>
                     <span class="p-l"> Dashboard</span>
                 </a>
             </li>
 
             <li ng-class="{active : activeMenu === 'estatistics'}" ng-click="setActive('estatistics')">
                 <a md-ink-ripple ui-sref="adm.statistics">
-                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">graphic_eq</md-icon>
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">show_chart</md-icon>
                     <span class="p-l"> Estatisticas</span>
                 </a>
             </li>
@@ -43,8 +43,8 @@
             </li>
 
             <li ng-class="{active : activeMenu === 'roles'}" ng-click="setActive('roles')">
-                <a md-ink-ripple ui-sref="adm.statistics">
-                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">vpn_key</md-icon>
+                <a md-ink-ripple ui-sref="adm.profiles">
+                    <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">recent_actors</md-icon>
                     <span class="p-l"> Perfis</span>
                 </a>
             </li>
