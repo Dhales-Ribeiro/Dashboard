@@ -69,14 +69,30 @@ application.config(function ($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('adm.statistics', {
-            url: '/adminStatistics',
-            templateUrl: './resources/views/statistics/statistics.html'
+        .state('adm.dashboard', {
+            url: '/adminDashboard',
+            templateUrl: './resources/views/dashboard/index.html',
+            controller: 'dashboardController'
         })
         .state('adm.users', {
             url: '/adminUsers',
             templateUrl: './resources/views/users/index.html',
-            controller: 'userControler'
+            controller: 'userController'
+        })
+        .state('adm.usersRegister', {
+            url: '/adminUsers/register',
+            templateUrl: './resources/views/users/form.html',
+            controller: 'userController'
+        })
+        .state('adm.profiles', {
+            url: '/adminProfiles',
+            templateUrl: './resources/views/profiles/index.html',
+            controller: 'rolesController'
+        })
+        .state('adm.profilesRegister', {
+            url: '/adminProfiles/register',
+            templateUrl: './resources/views/profiles/form.html',
+            controller: 'rolesController'
         })
 
 
