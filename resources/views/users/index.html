@@ -1,20 +1,21 @@
 <div class="panel panel-dca">
     <div class="panel-heading bg-white bold">
         Usuários do Siatema
+
     </div>
     <div class="panel-body">
-
+        <div>
+            <md-button class=" md-raised md-warn" ui-sref="adm.usersRegister">
+                <md-icon class="material-icons">person_add</md-icon>
+                Novo Usuário
+            </md-button>
+        </div>
         <form name="projectForm">
             <md-input layout="row">
                 <md-input-container flex class="md-block animated bounceIn" style="-webkit-animation-delay: 1.1s;">
                     <label>Pesquisar</label>
-                    <input name="search" ng-model="search" required>
+                    <input name="search" ng-model="search" required ng-model="search">
                 </md-input-container>
-                <div>
-                    <md-button class="md-fab md-mini md-raised">
-                        <md-icon class="material-icons">search</md-icon>
-                    </md-button>
-                </div>
             </md-input>
         </form>
 
@@ -23,22 +24,23 @@
             <table md-table md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" ng-model="selected" md-progress="promise">
                 <thead ng-if="!options.decapitate" md-head md-order="query.order" md-on-reorder="logOrder">
                 <tr md-row>
-                    <th md-column md-order-by="name"><span>ID</span></th>
-                    <th md-column md-order-by="type"><span>Nome</span></th>
-                    <th md-column md-numeric md-order-by="calories.value" md-desc><span>Email</span></th>
-                    <th md-column md-numeric md-order-by="fat.value"><span>Perfil</span></th>
-                    <th md-column md-numeric md-order-by="carbs.value"><span>Opções</span></th>
-
+                    <th md-column md-order-by="id"><span>ID</span></th>
+                    <th md-column md-order-by="name"><span>Nome</span></th>
+                    <th md-column md-order-by="email" md-desc><span>Email</span></th>
+                    <th md-column md-order-by="perfil"><span>Perfil</span></th>
+                    <th md-column md-order-by="status"><span>Status</span></th>
+                    <th md-column><span>Opções</span></th>
                 </tr>
                 </thead>
                 <tbody md-body>
-                <tr md-row md-select="dessert" md-on-select="logItem" md-auto-select="options.autoSelect" ng-disabled="dessert.calories.value > 400" ng-repeat="dessert in desserts.data | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                <tr md-row md-select="dessert" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="dessert in desserts | filter: search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                    <td md-cell>{{dessert.id}}</td>
                     <td md-cell>{{dessert.name}}</td>
-                    <td md-cell>{{dessert.name}}</td>
-                    <td md-cell>{{dessert.calories.value}}</td>
-                    <td md-cell>{{dessert.fat.value | number: 2}}</td>
+                    <td md-cell>{{dessert.email}}</td>
+                    <td md-cell>{{dessert.rolename}}</td>
+                    <td md-cell>{{dessert.status}}</td>
                     <td md-cell>
-                        <md-select ng-model="dessert.type" placeholder="Other">
+                        <md-select ng-model="dessert.type" placeholder="Opções">
                             <md-option ng-value="type" ng-repeat="type in getTypes()">{{type}}</md-option>
                         </md-select>
                     </td>
@@ -47,13 +49,10 @@
             </table>
         </md-table-container>
 
-        <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{desserts.count}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
+        <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{desserts.length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
             </md-card>
-
-
     </div>
     <div class="panel-footer">
-
     </div>
 
 </div>
