@@ -1,0 +1,68 @@
+<div class="panel panel-dca">
+    <div class="panel-heading bg-white bold">
+        Cadastro de Usuários
+    </div>
+    <div class="panel-body">
+
+        <form name="registerForm">
+           <md-input-container class="md-block">
+               <label>Nome</label>
+               <md-icon class="material-icons" class="name">person</md-icon>
+               <input type="text" name="name" ng-model="user.name" required minlength="3" maxlength="100"/>
+               <div ng-messages="registerForm.name.$error" role="alert">
+                   <div ng-show="registerForm.name.$error.minlength">O camopo de ter no minimo 3 caracteres!</div>
+               </div>
+           </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Email</label>
+                <md-icon class="material-icons">email</md-icon>
+                <input type="Email" name="email" ng-model="user.email" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                <div ng-messages="registerForm.email.$error" role="alert">
+                    <div ng-show="registerForm.email.$error.pattern">Você deve usar um email valido!</div>
+                    <div ng-show="registerForm.email.$error.minlength">O camopo de ter no minimo 10 caracteres!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Senha</label>
+                <md-icon class="material-icons">lock</md-icon>
+                <input type="text" name="passwd" ng-model="user.passwd" required minlength="6" maxlength="100" />
+                <div ng-messages="registerForm.passwd.$error" role="alert">
+                    <div ng-show="registerForm.passwd.$error.minlength">O camopo de ter no minimo 6 caracteres!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Perfil</label>
+                <md-icon class="material-icons">fingerprint</md-icon>
+                <md-select name="role" ng-model="user.role" required placeholder="Selecione um Perfil">
+                    <md-option ng-value="role.id" ng-repeat="role in roles">{{role.rolename}}</md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Status</label>
+                <md-icon class="material-icons">thumbs_up_down</md-icon>
+                <md-select name="status" ng-model="user.status" required placeholder="Selecione um Status">
+                    <md-option value="Ativo">Ativo</md-option>
+                    <md-option value="Inativo">Inativo</md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block flex text-right">
+
+                <md-button class="md-raised" ui-sref="adm.users">
+                    Cancelar
+                </md-button>
+                <md-button class="md-raised md-warn" ng-click="register(user)" ng-disabled="registerForm.$invalid">
+                    Salvar
+                </md-button>
+            </md-input-container>
+        </form>
+    </div>
+    <div class="panel-footer">
+
+    </div>
+
+</div>
