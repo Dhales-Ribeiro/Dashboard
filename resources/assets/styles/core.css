@@ -43,10 +43,7 @@ body {
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     color: rgba(0, 0, 0, 0.87);
-    background-color: rgb(250,250,250);
-}
-.paddingContainer{
-    padding: 32px 32px;
+    background: #FFF;
 }
 .label {
     display: inline;
@@ -60,6 +57,10 @@ body {
     vertical-align: baseline;
     border-radius: .25em;
 }
+.paddingContainer{
+    padding: 32px 32px;
+}
+
 .bold{
     font-weight: bold;
 }
@@ -194,7 +195,7 @@ md-button-group > .md-button {
         top: 48px;
     }
     .app-content {
-        margin-top: 50px;
+        margin-top: 48px;
     }
 }
 
@@ -444,15 +445,15 @@ md-button-group > .md-button {
     background: transparent;
 }
 
-.left-content{
+.teste1{
     position: fixed;
     left: 0;
-    background: #1A237E;
+    background: rgb(183,28,28);
     width: 50%;
     height: 100%;
     padding: 10px;
 }
-.rigtht-content{
+.teste2{
     position: fixed;
     right: 0;
     background: rgb(255,255,255);
@@ -589,3 +590,9 @@ md-toolbar.md-table-toolbar.alternate {
     color: #1e88e5;
     background-color: #e3f2fd;
 }
+md-toast {
+    max-width: 100%;
+    z-index: 1031;
+    margin-left: auto;
+    margin-right: auto;
+}}
