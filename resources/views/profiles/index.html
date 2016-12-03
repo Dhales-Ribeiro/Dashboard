@@ -1,0 +1,53 @@
+<div class="panel panel-dca">
+    <div class="panel-heading bg-white bold">
+        Perfis do Siatema
+    </div>
+    <div class="panel-body">
+        <div>
+            <md-button class=" md-raised md-warn" ui-sref="adm.profilesRegister">
+                <md-icon class="material-icons">recent_actors</md-icon>
+                Novo Perfil
+            </md-button>
+        </div>
+        <form name="projectForm">
+            <md-input layout="row">
+                <md-input-container flex class="md-block animated bounceIn" style="-webkit-animation-delay: 1.1s;">
+                    <label>Pesquisar</label>
+                    <input name="search" ng-model="search" required ng-model="search">
+                </md-input-container>
+            </md-input>
+        </form>
+
+        <md-card>
+            <md-table-container>
+                <table md-table md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" ng-model="selected" md-progress="promise">
+                    <thead ng-if="!options.decapitate" md-head md-order="query.order" md-on-reorder="logOrder">
+                    <tr md-row>
+                        <th md-column md-order-by="id"><span>ID</span></th>
+                        <th md-column md-order-by="name"><span>Slug</span></th>
+                        <th md-column md-order-by="email" md-desc><span>Perfil</span></th>
+                        <th md-column><span>Opções</span></th>
+                    </tr>
+                    </thead>
+                    <tbody md-body>
+                    <tr md-row md-select="dessert" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="dessert in desserts | filter: search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                        <td md-cell>{{dessert.id}}</td>
+                        <td md-cell>{{dessert.slug}}</td>
+                        <td md-cell>{{dessert.rolename}}</td>
+                        <td md-cell>
+                            <md-select ng-model="dessert.type" placeholder="Opções">
+                                <md-option ng-value="type" ng-repeat="type in getTypes()">{{type}}</md-option>
+                            </md-select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </md-table-container>
+
+            <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{desserts.length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
+        </md-card>
+    </div>
+    <div class="panel-footer">
+    </div>
+
+</div>
