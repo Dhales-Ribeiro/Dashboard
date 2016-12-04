@@ -1,4 +1,4 @@
-<md-toolbar class="md-primary">
+<md-toolbar class="md-primary animated fadeIn">
     <div class="md-toolbar-tools ">
         <h3>
             <span>Dashboard</span>
@@ -6,7 +6,7 @@
     </div>
 </md-toolbar>
 
-<form name="userForm" class="form-signin ">
+<form name="userForm" class="form-signin" style="z-index: 1">
     <md-input-container class="md-block email animated bounceIn">
         <label>Email</label>
         <input name="email" ng-model="user.email" ng-init="user.email='administrador@delosservicos.com.br'" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
@@ -24,7 +24,7 @@
             <div ng-show="userForm.password.$error.minlength">O camopo de ter no minimo 6 caracteres!</div>
         </div>
     </md-input-container>
-    <div class="text-center">
+    <div class="text-center animated bounceIn">
         <md-button type="submit" class="md-raised md-accent" ng-click="login(user)">Entrar</md-button>
     </div>
 </form>
@@ -33,21 +33,21 @@
     <div class="container-fluid">
         <div class="navbar-container">
             <div class=" pull-right">
-                <md-button class="md-icon-button">
+                <md-button class="md-icon-button animated bounceIn" style="-webkit-animation-delay: 0.5s;">
                     <md-icon class="material-icons">help_outline</md-icon>
                     <md-tooltip md-direction="top">
                         Ajuda
                     </md-tooltip>
                 </md-button>
 
-                <md-button class="md-icon-button" ui-sref="admLogin">
+                <md-button class="md-icon-button animated bounceIn" ui-sref="admLogin" style="-webkit-animation-delay: 0.6s;">
                     <md-icon class="material-icons">developer_board</md-icon>
                     <md-tooltip md-direction="top">
                         Administrar Sistema
                     </md-tooltip>
                 </md-button>
 
-                <md-button class="md-icon-button" onclick="window.close()">
+                <md-button class="md-icon-button animated bounceIn" onclick="window.close()" style="-webkit-animation-delay: 0.7s;">
                     <md-icon class="material-icons">power_settings_new</md-icon>
                     <md-tooltip md-direction="top">
                         Sair do Sistema
@@ -58,4 +58,4 @@
     </div>
 </nav>
 
-<div id="particles-js"></div>
+<div id="particles-js" class="animated infinite flash" style="-webkit-animation-duration: 10s;"></div>

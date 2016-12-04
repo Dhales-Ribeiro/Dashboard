@@ -37,13 +37,14 @@
 
 html {
     position: relative;
-    min-height: 100%;
+    height: 100%;
 }
 body {
     font-size: 14px;
-    -webkit-font-smoothing: antialiased;
+    //-webkit-font-smoothing: antialiased;
     color: rgba(0, 0, 0, 0.87);
-    background: #FFF;
+    background-color: rgb(250,250,250);
+    height: 100%;
 }
 .label {
     display: inline;

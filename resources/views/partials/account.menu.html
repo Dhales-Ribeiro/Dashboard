@@ -1,24 +1,24 @@
 <div class="menu">
     <ul class="sidebar nav">
 
-        <li ng-class="{active : activeMenu === 'myProfile'}" ng-click="setActive('myProfile')">
+        <li ng-class="{active : activeMenu === 'myProfile'}" ng-click="setActive('myProfile')" class="animated fadeIn" style="-webkit-animation-delay: 0.3s;">
             <a md-ink-ripple ui-sref="adm.dashboard " >
                 <!--<b class="badge bg-danger up pull-right">2</b>-->
-                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.3s;">perm_contact_calendar</md-icon>
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 0.4s;">perm_contact_calendar</md-icon>
                 <span class="p-l"> Meu Perfil</span>
             </a>
         </li>
 
-        <li ng-class="{active : activeMenu === 'myConfig'}" ng-click="setActive('myConfig')">
+        <li ng-class="{active : activeMenu === 'myConfig'}" ng-click="setActive('myConfig')" class="animated fadeIn" style="-webkit-animation-delay: 0.4s;">
             <a md-ink-ripple ui-sref="adm.statistics">
-                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">settings_applications</md-icon>
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 0.5s;">settings_applications</md-icon>
                 <span class="p-l"> Configurações</span>
             </a>
         </li>
 
         <li>
-            <a md-ink-ripple ui-sref="access.admlockscreen">
-                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">exit_to_app</md-icon>
+            <a md-ink-ripple ui-sref="access.admlockscreen" class="animated fadeIn" style="-webkit-animation-delay: 0.5s;">
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 0.6s;">exit_to_app</md-icon>
                 <span class="p-l"> Logout</span>
             </a>
         </li>
@@ -28,9 +28,9 @@
 
 <ul class="sidebar nav">
 
-    <li ng-class="{active : activeMenu === 'fullScreen'}" ng-click="setActive('fullScreen')">
+    <li ng-class="{active : activeMenu === 'fullScreen'}" ng-click="setActive('fullScreen')" class="animated fadeIn" style="-webkit-animation-delay: 0.6s;">
         <a md-ink-ripple ui-sref="adm.profiles">
-            <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">fullscreen</md-icon>
+            <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 0.7s;">fullscreen</md-icon>
             <span class="p-l"> Full Screen</span>
         </a>
     </li>

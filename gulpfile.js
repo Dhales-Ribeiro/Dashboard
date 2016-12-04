@@ -35,6 +35,7 @@ var styles = [
     vendors + 'bootstrap/dist/css/bootstrap-theme.min.css',
     vendors + 'angular-material/angular-material.min.css',
     vendors + 'angular-material-data-table/dist/md-data-table.min.css',
+    vendors + 'animate.css/animate.min.css',
     './resources/assets/styles/**',
 ];
 

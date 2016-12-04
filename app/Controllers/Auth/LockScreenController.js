@@ -2,7 +2,7 @@
  * Created by dhales on 04/12/16.
  */
 
-application.controller('LockScreenController', function ($scope, $location, $state, localStorageService, menssagesService) {
+application.controller('LockScreenController', function ($scope, $location, $state, $timeout, localStorageService, menssagesService) {
     particlesJS.load('particles-js', './public/js/particles.json', function() {
     });
 
@@ -46,7 +46,12 @@ application.controller('LockScreenController', function ($scope, $location, $sta
         }
 
         if(lock.password === pass.password){
-            $state.go('adm.dashboard');
+            $scope.logon = true;
+            function redirect() {
+                $state.go('adm.dashboard');
+            }
+            $timeout(redirect, 1000);
+
         }else{
             var text = {
                 content: "Erro, senha invalida.",

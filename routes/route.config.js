@@ -98,7 +98,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('access', {
             url: '/access',
-            template: '<div class="indigo bg-big"><div ui-view class="fade-in-down smooth"></div></div>'
+            template: '<div ui-view></div>'
         })
         .state('access.admlockscreen', {
             url: '/admlockscreen ',
