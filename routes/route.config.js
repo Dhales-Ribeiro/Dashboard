@@ -49,7 +49,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-
         .state('adm', {
             url: '/adm',
             views: {
@@ -94,6 +93,19 @@ application.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: './resources/views/profiles/form.html',
             controller: 'rolesController'
         })
+
+        // States For Access
+
+        .state('access', {
+            url: '/access',
+            template: '<div class="indigo bg-big"><div ui-view class="fade-in-down smooth"></div></div>'
+        })
+        .state('access.admlockscreen', {
+            url: '/admlockscreen ',
+            templateUrl: './resources/views/auth/adm.lockscreen.html',
+            controller: 'LockScreenController'
+        })
+
 
 
     $urlRouterProvider.otherwise('login');
