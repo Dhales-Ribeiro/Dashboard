@@ -4,16 +4,16 @@
         <h3>Painel de Controle</h3>
         <h4>Use um login de Administrador para acessar o painel</h4>
         <div class="adm-icon-icon">
-            <md-icon class="material-icons" style="font-size: 150px">fingerprint</md-icon>
+            <md-icon class="material-icons md-primary md-hue-1" style="font-size: 150px">fingerprint</md-icon>
         </div>
     </div>
-    <div class="rigtht-content">
+    <div class="right-content">
         <div class="pull-right">
-            <md-button class="md-raised" ui-sref="login">Aplicação</md-button>
+            <md-button class="md-raised md-warn" ui-sref="login">Aplicação</md-button>
         </div>
 
-        <form name="userForm" class="form-admin">
-            <md-input-container class="md-block email animated bounceIn">
+        <form name="userForm" class="form-admin ">
+            <md-input-container class="md-block email animated bounceIn md-accent">
                 <label>Email</label>
                 <input name="email" ng-model="user.email" ng-init="user.email='administrador@delosservicos.com.br'" required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
 
@@ -23,7 +23,7 @@
                 </div>
             </md-input-container>
 
-            <md-input-container class="md-block pass animated bounceIn">
+            <md-input-container class="md-block pass animated bounceIn md-accent">
                 <label>Password</label>
                 <input name="password" type="password" ng-model="user.password" required minlength="6"/>
                 <div ng-messages="userForm.password.$error" role="alert">
