@@ -1,0 +1,55 @@
+<style>
+    body{
+        background-color: #ECEFF1;
+    }
+</style>
+<form name="userForm" class="form-signin" style="top:35%; background-color: inherit">
+    <md-input-container class="md-block animated bounceIn text-center">
+        <spam>
+            <md-icon class="material-icons" style="font-size: 130px; width: inherit; height: inherit; vertical-align: inherit">perm_identity</md-icon>
+        </spam>
+
+    </md-input-container>
+    <md-input-container class="md-block email animated bounceIn text-center">
+        <label>
+            {{lock.name}}
+            <md-tooltip md-direction="top">
+                {{lock.email}}
+            </md-tooltip>
+        </label>
+        <br>
+    </md-input-container>
+
+    <md-input-container class="md-block pass animated bounceIn ">
+        <label>Password</label>
+        <input name="password" type="password" ng-model="user.password" required minlength="6"/>
+        <div ng-messages="userForm.password.$error" role="alert">
+            <div ng-show="userForm.password.$error.minlength">O camopo de ter no minimo 6 caracteres!</div>
+        </div>
+    </md-input-container>
+    <div class="text-center">
+        <md-button type="submit" class="md-raised md-accent" ng-click="enter(user)">Entrar</md-button>
+    </div>
+</form>
+<nav class="navbar navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-container">
+            <div class=" pull-right">
+                <md-button class="md-icon-button">
+                    <md-icon class="material-icons">help_outline</md-icon>
+                    <md-tooltip md-direction="top">
+                        Ajuda
+                    </md-tooltip>
+                </md-button>
+
+                <md-button class="md-icon-button"  ng-click="exitApp($event)">
+                    <md-icon class="material-icons">power_settings_new</md-icon>
+                    <md-tooltip md-direction="top">
+                        Sair do Sistema
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="particles-js"></div>
