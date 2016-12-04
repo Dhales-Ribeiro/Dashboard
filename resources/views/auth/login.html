@@ -32,22 +32,28 @@
 <nav class="navbar navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="navbar-container">
-            <div class="pull-left">
-                <md-button class="md-raised">
-                    <md-icon class="material-icons">help_outline</md-icon>
-                </md-button>
-                <md-button class="md-raised">
-                    PT
-                </md-button>
-            </div>
+
 
             <div class=" pull-right">
-                <md-button class="md-raised" ui-sref="admLogin">
-                    <md-icon class="material-icons">settings</md-icon>
+                <md-button class="md-icon-button">
+                    <md-icon class="material-icons">help_outline</md-icon>
+                    <md-tooltip md-direction="top">
+                        Ajuda
+                    </md-tooltip>
                 </md-button>
 
-                <md-button class="md-raised" onclick="window.close()">
+                <md-button class="md-icon-button" ui-sref="admLogin">
+                    <md-icon class="material-icons">developer_board</md-icon>
+                    <md-tooltip md-direction="top">
+                        Administrar Sistema
+                    </md-tooltip>
+                </md-button>
+
+                <md-button class="md-icon-button" onclick="window.close()">
                     <md-icon class="material-icons">power_settings_new</md-icon>
+                    <md-tooltip md-direction="top">
+                        Sair do Sistema
+                    </md-tooltip>
                 </md-button>
             </div>
         </div>
