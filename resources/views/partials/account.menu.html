@@ -1,0 +1,37 @@
+<div class="menu">
+    <ul class="sidebar nav">
+
+        <li ng-class="{active : activeMenu === 'myProfile'}" ng-click="setActive('myProfile')">
+            <a md-ink-ripple ui-sref="adm.dashboard " >
+                <!--<b class="badge bg-danger up pull-right">2</b>-->
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.3s;">perm_contact_calendar</md-icon>
+                <span class="p-l"> Meu Perfil</span>
+            </a>
+        </li>
+
+        <li ng-class="{active : activeMenu === 'myConfig'}" ng-click="setActive('myConfig')">
+            <a md-ink-ripple ui-sref="adm.statistics">
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">settings_applications</md-icon>
+                <span class="p-l"> Configurações</span>
+            </a>
+        </li>
+
+        <li>
+            <a md-ink-ripple ui-sref="adm.users">
+                <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">exit_to_app</md-icon>
+                <span class="p-l"> Logout</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<ul class="sidebar nav">
+
+    <li ng-class="{active : activeMenu === 'fullScreen'}" ng-click="setActive('fullScreen')">
+        <a md-ink-ripple ui-sref="adm.profiles">
+            <md-icon class="material-icons animated bounceIn" style="-webkit-animation-delay: 1.5s;">fullscreen</md-icon>
+            <span class="p-l"> Full Screen</span>
+        </a>
+    </li>
+</ul>
