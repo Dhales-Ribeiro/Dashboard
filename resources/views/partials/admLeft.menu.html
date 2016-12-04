@@ -1,24 +1,25 @@
-<div class="box-cell scrollable hover">
+<div class="box-cell scrollable hover" ng-init="accountShow = false">
     <div class="box-inner">
         <div class="p hidden-folded" style="background-image:url(./public/images/mw-06.png); height: 150px; position: relative; background-size:cover">
             <div style="position:absolute; bottom: 0px;left: 0px; padding: 15px">
                 <span class="block m-t-sm" style="color: #FFF;">
-                <span class="block bold">{{user.name}}</span>
-            <span class="pull-right auto">
-              <i class="fa inline fa-caret-down"></i>
-              <i class="fa none fa-caret-up"></i>
-            </span>
-                {{user.email}}
+                    <span class="block bold">{{user.name}}</span>
+                    <span class="pull-right">
+                      <i class="material-icons" ng-show="accountShow == false">arrow_drop_down</i>
+                      <i class="material-icons" ng-show="accountShow == true">arrow_drop_up</i>
+                    </span>
+                    <span ng-click="accountShow = { true: false, false:true}[accountShow]">{{user.email}}</span>
             </span>
             </div>
-
         </div>
     </div>
 
-    <div class="menu">
+    <div ng-class="{show : accountShow === true, hide: accountShow === false}" ng-include="'./resources/views/partials/account.html'"></div>
+
+    <div class="menu" ng-class="{hide : accountShow === true, show: accountShow === false}">
         <ul class="sidebar nav">
             <li class="nav-header m-v-sm hidden-folded" style="padding:10px 16px">
-                Menu do Sistema
+                Menu
             </li>
             <li ng-class="{active : activeMenu === 'start'}" ng-click="setActive('start')">
                 <a md-ink-ripple ui-sref="adm.dashboard " >
