@@ -1,0 +1,41 @@
+<div class="panel panel-dca">
+    <div class="panel-heading bg-white bold">
+        Cadastro de Perfis
+    </div>
+    <div class="panel-body">
+
+        <form name="registerForm">
+
+            <md-input-container class="md-block">
+                <label>Nome do Prerfil </label>
+                <md-icon class="material-icons">perm_identity</md-icon>
+                <input type="text" name="role" ng-model="role.role" required minlength="3" maxlength="100"/>
+                <div ng-messages="registerForm.email.$error" role="alert">
+                    <div ng-show="registerForm.email.$error.minlength">O camopo de ter no minimo 3 caracteres!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Slug</label>
+                <md-icon class="material-icons" class="name">perm_contact_calendar</md-icon>
+                <input type="text" name="slug" ng-model="role.slug" required minlength="3" maxlength="100"/>
+                <div ng-messages="registerForm.name.$error" role="alert">
+                    <div ng-show="registerForm.name.$error.minlength">O camopo de ter no minimo 3 caracteres!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block flex text-right">
+                <md-button class="md-raised" ui-sref="adm.profiles">
+                    Cancelar
+                </md-button>
+                <md-button class="md-raised md-warn" ng-click="register(role)" ng-disabled="registerForm.$invalid">
+                    Salvar
+                </md-button>
+            </md-input-container>
+        </form>
+    </div>
+    <div class="panel-footer">
+
+    </div>
+
+</div>

@@ -10,18 +10,49 @@ var scripts = [
     vendors + 'bootstrap/dist/js/bootstrap.min.js',
     vendors + 'angular/angular.min.js',
     vendors + 'angular-ui-router/release/angular-ui-router.min.js',
-    './resources/assets/scripts/core.js',
-    './config/app.js',
-    './routes/route.config.js',
+    vendors + 'angular-animate/angular-animate.min.js',
+    vendors + 'angular-aria/angular-aria.min.js',
+    vendors + 'angular-messages/angular-messages.min.js',
+    vendors + 'angular-material/angular-material.min.js',
+    vendors + 'angular-local-storage/dist/angular-local-storage.min.js',
+    vendors + 'angular-material-data-table/dist/md-data-table.min.js',
+    vendors + 'moment/moment.js',
+    vendors + 'moment/locale/pt-br.js',
+    vendors + 'chart.js/dist/Chart.min.js',
+    vendors + 'angular-chart.js/dist/angular-chart.min.js',
+    vendors + 'particles.js/particles.js',
+    './resources/assets/scripts/**',
+    './config/**',
+    './app/dbService.js',
+    './routes/**',
+    './app/Services/**',
+    './app/Constant/**.js',
+    './app/Controllers/**/**',
 ];
 
 var styles = [
     vendors + 'bootstrap/dist/css/bootstrap.min.css',
     vendors + 'bootstrap/dist/css/bootstrap-theme.min.css',
+    vendors + 'angular-material/angular-material.min.css',
+    vendors + 'angular-material-data-table/dist/md-data-table.min.css',
+    './resources/assets/styles/**',
+];
+
+var fonts = [
+    vendors + 'material-design-icons/iconfont/**'
+];
+
+var images = [
+    './resources/assets/images/**'
 ];
 
 elixier(function (mix) {
     mix.copy('./node_modules/jquery/dist/jquery.min.js', './public/js/');
+
+    mix.copy('./app/Constant/particles.json', './public/js/');
+    mix.copy(fonts, './public/fonts/');
+    mix.copy(images, './public/images/');
+
     mix.scripts(scripts);
     mix.styles(styles);
     
