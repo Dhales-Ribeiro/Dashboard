@@ -342,17 +342,17 @@ md-button-group > .md-button {
 .sidebar.nav > li > a:hover,
 .sidebar.nav > li > a:focus{
     background-color: rgba(158, 158, 158, 0.2);
-    border-left: 5px solid rgb(183,28,28);
+    border-left: 5px solid #263238;
 }
 
 .sidebar.nav > li.active > a,
 .sidebar.nav > li.active > a:hover,
 .sidebar.nav > li.active > a:focus{
     background-color: rgba(158, 158, 158, 0.2);
-    border-left: 5px solid rgb(183,28,28);
+    border-left: 5px solid #263238;
 }
 .sidebar.nav > li.active > a md-icon {
-    color: rgb(183,28,28);
+    color: #263238;
     font-weight: bold;
 }
 .m-v-sm {
@@ -400,15 +400,15 @@ md-button-group > .md-button {
 
 
 ::selection {
-    background:rgb(183,28,28);
+    background:#263238;
     color:#e4e4e4;
 }
 ::-moz-selection {
-    background:rgb(183,28,28);
+    background:#263238;
     color:#e4e4e4;
 }
 ::-webkit-selection {
-    background:rgb(183,28,28);
+    background:#263238;
     color:#e4e4e4;
 }
 ::-webkit-scrollbar {
@@ -420,19 +420,19 @@ md-button-group > .md-button {
     height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(183,28,28);
-    border: 1px none rgb(183,28,28);
+    background: #263238;
+    border: 1px none #263238;
 //border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(183,28,28);
+    background: #263238;
 }
 ::-webkit-scrollbar-thumb:active {
-    background: rgb(183,28,28);
+    background: #263238;
 }
 ::-webkit-scrollbar-track {
     background: #ffffff;
-    border: 1px none rgb(183,28,28);
+    border: 1px none #263238;
 //border-radius: 50px;
 }
 ::-webkit-scrollbar-track:hover {
@@ -445,15 +445,15 @@ md-button-group > .md-button {
     background: transparent;
 }
 
-.teste1{
+.left-content{
     position: fixed;
     left: 0;
-    background: rgb(183,28,28);
+    background: #263238;
     width: 50%;
     height: 100%;
     padding: 10px;
 }
-.teste2{
+.right-content{
     position: fixed;
     right: 0;
     background: rgb(255,255,255);
