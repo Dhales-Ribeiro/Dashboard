@@ -243,12 +243,12 @@ md-button-group > .md-button {
     .folded:hover,
     .folded:focus,
     .folded.active {
-        width: 256px;
+        width: 320px;
     }
     .folded:hover > *,
     .folded:focus > *,
     .folded.active > * {
-        width: 256px;
+        width: 320px;
     }
     .folded:hover .nav li ul,
     .folded:focus .nav li ul,
@@ -595,4 +595,10 @@ md-toast {
     z-index: 1031;
     margin-left: auto;
     margin-right: auto;
-}}
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block!important;
+}
