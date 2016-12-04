@@ -1,7 +1,12 @@
 /**
  * Created by dhales on 24/11/16.
  */
-application.controller('LeftMenuController', function ($scope, $mdSidenav, localStorageService) {
+application.controller('LeftMenuController', function ($scope, $mdSidenav, $state, localStorageService) {
+
+    if($state.current.url == '/adminDashboard'){
+        $scope.activeMenu = "start";
+    }
+
     $scope.showMobileMainHeader = true;
     $scope.openSideNavPanel = function() {
         $mdSidenav('left').open();
