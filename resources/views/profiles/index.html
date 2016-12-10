@@ -36,7 +36,7 @@
                         <td md-cell>{{dessert.rolename}}</td>
                         <td md-cell>
                             <md-select ng-model="dessert.type" placeholder="Opções">
-                                <md-option ng-value="type" ng-repeat="type in getTypes()">{{type}}</md-option>
+                                <md-option ng-value="type" ng-repeat="type in getTypes()" ng-click="optionChange(dessert.id, type)">{{type}}</md-option>
                             </md-select>
                         </td>
                     </tr>
