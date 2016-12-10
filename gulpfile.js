@@ -21,6 +21,7 @@ var scripts = [
     vendors + 'chart.js/dist/Chart.min.js',
     vendors + 'angular-chart.js/dist/angular-chart.min.js',
     vendors + 'particles.js/particles.js',
+    vendors + 'angular-fullscreen-master/src/angular-fullscreen.js',
     './resources/assets/scripts/**',
     './config/**',
     './app/dbService.js',
