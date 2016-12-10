@@ -1,11 +1,22 @@
 /**
  * Created by dhales on 24/11/16.
  */
-application.controller('LeftMenuController', function ($scope, $mdSidenav, $state, localStorageService) {
+application.controller('LeftMenuController', function ($scope, $mdSidenav, $state, localStorageService, Fullscreen) {
 
     if($state.current.url == '/adminDashboard'){
         $scope.activeMenu = "start";
     }
+
+    $scope.goFullscreen = function () {
+
+        if (Fullscreen.isEnabled())
+            Fullscreen.cancel();
+        else
+            Fullscreen.all();
+    }
+
+    $scope.subConfig = false;
+    $scope.aneelConfig = false;
 
     $scope.showMobileMainHeader = true;
     $scope.openSideNavPanel = function() {
