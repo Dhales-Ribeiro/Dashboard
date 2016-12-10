@@ -90,9 +90,15 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('adm.profilesRegister', {
             url: '/adminProfiles/register',
-            templateUrl: './resources/views/profiles/form.html',
+            templateUrl: './resources/views/profiles/create.html',
             controller: 'rolesController'
         })
+        .state('adm.profilesEdit', {
+            url: '/adminProfiles/edit/:id',
+            templateUrl: './resources/views/profiles/edit.html',
+            controller: 'rolesController'
+        })
+
 
         // States For Access
 
