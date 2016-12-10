@@ -3,7 +3,7 @@
  */
 
 
-var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule', 'md.data.table', 'chart.js'])
+var application = angular.module("dashboard", [ "ui.router", 'ngMaterial', 'LocalStorageModule', 'md.data.table', 'chart.js', 'FBAngular'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
             .primaryPalette('blue-grey', {
