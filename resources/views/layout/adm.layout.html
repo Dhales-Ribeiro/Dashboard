@@ -1,12 +1,22 @@
 <!-- menu -->
-<div class="app-aside md-whiteframe-z1 md-sidenav-left folded animated bounceInLeft" md-component-id="left"
-     ui-view="leftMenu@" ng-controller="LeftMenuController" style="background: #FFF; overflow-x: hidden; -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+<div  ng-controller="LeftMenuController" class="app-aside md-whiteframe-z1 md-sidenav-left" md-component-id="left" ng-class="{'folded': isfixMenu == false}"
+     ui-view="leftMenu@" style="background: #FFF; overflow-x: hidden; -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);">
 </div>
 <!-- / menu -->
-
+<md-toolbar class="md-primary md-hue-3" style="z-index:61; position: fixed;" ng-controller="appController">
+    <div class="md-toolbar-tools">
+        <h2>
+            <span class="animated zoomIn" style="-webkit-animation-delay: 1.3s;">Dashboard</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button animated fadeIn" ng-click="exitApp($event)" style="-webkit-animation-delay: 1.8s;">
+            <i class="material-icons i-24">power_settings_new</i>
+        </md-button>
+    </div>
+</md-toolbar>
 <!-- content -->
-<div ui-view="content@">
+<div ui-view="content@" class="app-content padding">
 </div>
 <!-- / content -->
 
