@@ -57,7 +57,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
                 },
                 'content': {
                     templateUrl: './resources/views/partials/adm.content.html',
-                    controller: 'appController'
                 },
                 'leftMenu': {
                     templateUrl: './resources/views/partials/admLeft.menu.html',
