@@ -17,6 +17,11 @@ application.controller('LeftMenuController', function ($scope, $mdSidenav, $stat
 
     $scope.subConfig = false;
     $scope.aneelConfig = false;
+    $scope.isfixMenu = false;
+
+    $scope.fixMenu = function () {
+        $scope.isfixMenu = { true: false, false:true}[$scope.isfixMenu]
+    }
 
     $scope.showMobileMainHeader = true;
     $scope.openSideNavPanel = function() {
