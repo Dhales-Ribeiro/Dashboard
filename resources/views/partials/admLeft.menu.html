@@ -1,10 +1,13 @@
-<div class="box-cell scrollable hover" ng-init="accountShow = false">
+<div class="box scrollable hover" ng-init="accountShow = false">
     <div class="box-inner">
         <div class="p hidden-folded" style="background-image:url(./public/images/mw-06.png); height: 150px; position: relative; background-size:cover; color:#FFF">
             <div style="position:absolute; bottom: 0px;left: 0px; padding: 10px; color: #f2f3f3; width: 100% ">
-                <span class="block bold">{{user.name}}</span>
+                <div class="rounded w-64 bg-white inline pos-rlt" style="background-image:url(./public/images/profile.jpeg); background-size: 100%">
+
+                </div>
+                <span class="block bold">{{user.name}} </span>
                 <div ng-click="accountShow = { true: false, false:true}[accountShow]">
-                    <div class="pull-left" style="max-width: 198px; overflow: hidden; text-overflow: ellipsis;" >{{user.email}}</div>
+                    <div class="pull-left" style="max-width: 211px; overflow: hidden; text-overflow: ellipsis;" >{{user.email}}</div>
                     <div class="pull-right">
                         <i class="material-icons" ng-show="accountShow == false">arrow_drop_down</i>
                         <i class="material-icons" ng-show="accountShow == true">arrow_drop_up</i>
