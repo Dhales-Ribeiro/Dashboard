@@ -54,4 +54,13 @@
             <span class="p-l"> Full Screen</span>
         </a>
     </li>
+    <li ng-class="{active : activeMenu === 'fixMenu'}" ng-click="setActive('fixMenu'); fixMenu()" class="animated fadeIn" style="-webkit-animation-delay: 0.6s;">
+        <a md-ink-ripple>
+            <md-icon class="material-icons" ng-show="isfixMenu == true">check_box</md-icon>
+            <md-icon class="material-icons" ng-show="isfixMenu == false">check_box_outline_blank</md-icon>
+            <span class="p-l" ng-show="isfixMenu == false">Fixar Menu</span>
+            <span class="p-l" ng-show="isfixMenu == true">Escoder Menu</span>
+        </a>
+    </li>
+
 </ul>
