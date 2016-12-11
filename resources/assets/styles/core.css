@@ -38,6 +38,7 @@
 html {
     position: relative;
     height: 100%;
+    padding-bottom: 64px;
 }
 body {
     font-size: 14px;
@@ -45,6 +46,10 @@ body {
     color: rgba(0, 0, 0, 0.87);
     background-color: rgb(250,250,250);
     height: 100%;
+
+}
+body {
+    overflow: hidden;
 }
 .label {
     display: inline;
@@ -139,18 +144,19 @@ md-button-group > .md-button {
 
 .app-content {
     position: absolute;
-    top: 0;
+    top: 64px;
     right: 0;
     bottom: 0;
     left: 0;
+    height: 100%;
     overflow-y: auto;
-    margin-top: 64px
 }
 .app-aside {
-    position: fixed; !important;
+    position: absolute !important;
     top: 64px;
     bottom: 0;
     z-index: 60;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: transparent;
@@ -183,24 +189,35 @@ md-button-group > .md-button {
 .md-whiteframe-z5 {
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);
 }
+.padding {
+    padding: 32px;
+}
+
+.padding-out {
+    margin: -32px -32px;
+}
 @media (min-width: 799px) {
+    .app-aside {
+        display: block !important;
+        width: 240px;
+    }
     .app-aside.folded {
         width: 64px;
     }
     .app-aside.folded ~ .app-content {
         margin-left: 64px;
     }
-}
-@media (max-width: 959px) {
-    .app-aside {
-        top: 48px;
-    }
-    .app-content {
-        margin-top: 48px;
+    .app-aside ~ .app-content {
+        margin-left: 240px;
     }
 }
 
+
 @media (min-width: 800px) {
+    .app-aside {
+        display: block!important;
+        width: 256px;
+    }
     .folded {
         z-index: 60;
         -webkit-transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -399,6 +416,16 @@ md-button-group > .md-button {
     border-color: rgba(110,115,120,0.15)!important;
 }
 
+*:focus {
+    outline: 0 !important;
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
 
 ::selection {
     background:#263238;
